@@ -1,0 +1,105 @@
+/* ==========================================================================
+   6. History Page Styles
+   ========================================================================== */
+.history-page {
+    padding-top: 140px; /* Space for fixed header */
+    background-color: var(--bg-dark);
+}
+
+.history-hero {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 100px auto;
+    padding: 0 20px;
+}
+
+.history-main-title {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin: 15px 0;
+}
+
+.history-intro {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Timeline Layout Rows */
+.timeline-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 100px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.timeline-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .timeline-row {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .timeline-row.reverse {
+        direction: rtl; /* Alternates side by side layout automatically */
+    }
+    
+    .timeline-row.reverse .timeline-text {
+        direction: ltr; /* Keeps text writing orientation left-to-right */
+    }
+}
+
+.era-year {
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.timeline-text h3 {
+    font-size: 2.5rem;
+    margin: 10px 0 20px 0;
+    letter-spacing: -0.5px;
+}
+
+.timeline-text p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Premium Visual Containers */
+.image-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    backdrop-filter: var(--ios-blur);
+}
+
+/* Scroll Reveal States */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: var(--spring-transition);
+    transition-duration: 1s;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

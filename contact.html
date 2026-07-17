@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche Consultation Desk</title>
+    <link rel="stylesheet" href="homestyle.css">
+</head>
+<body>
+
+    <header class="global-header">
+            <div class="logo">PORSCHE</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="history.html">History</a>
+            <a href="models.html">Models</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <div class="contact-container">
+            
+            <section class="contact-form-section">
+                <span class="tag">Exclusive Service</span>
+                <h1>Secure Your Allocation.</h1>
+                <p class="subtitle">Enter your details below to schedule an individual consultation or coordinate a track delivery session.</p>
+
+                <form id="consultation-form" class="porsche-form">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" placeholder="Juan" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" placeholder="Dela Cruz" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="juandelacruz@gmail.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="model-select">Selected Model Allocation</label>
+                        <select id="model-select">
+                            <option value="general">Request General Inquiry</option>
+                            <option value="base">718 Cayman</option>
+                            <option value="s">718 Cayman S</option>
+                            <option value="boxster">718 Cayman Boxster</option>
+                            <option value="gts 4.0">718 Cayman GTS 4.0</option>
+                            <option value="spyder rs">718 Cayman Spyder RS</option>
+                            <option value="gt4 rs"> 718 Cayman GT4 RS</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="message">Custom Specifications & Delivery Requests</label>
+                        <textarea id="message" rows="4" placeholder="Special Paint options, Weissach packages etc. "></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Request</button>
+                </form>
+            </section>
+
+            <section class="contact-details-section">
+                <div class="showroom-visual">
+                    <img src="showroom.webp" alt="Modern minimal Porsche showroom interior design" class="showroom-img">
+                    <div class="visual-overlay"></div>
+                </div>
+
+                <div class="showroom-details">
+                    <div class="detail-block">
+                        <h3>Porsche Experience Desk</h3>
+                        <p>BGC High Street HQ Showroom<br>Bonifacio Global City, Taguig, Metro Manila, Philippines</p>
+                    </div>
+                    <div class="detail-block">
+                        <h3>Direct Connection</h3>
+                        <p>Tel: +63 (0) 711 911-0<br>Email: porscheph@gmail.com</p>
+                    </div>
+                    <div class="detail-block">
+                        <h3>Inquiries Status</h3>
+                        <p class="status-indicator">● Currently open until late 2026, Inquiries may spike during the holidays</p>
+                    </div>
+                </div>
+            </section>
+             <footer class="porsche-footer">
+    <div class="footer-container">
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="models.html">Models</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+
+        <hr class="footer-line">
+
+        <div class="footer-legal">
+            <p class="copyright">&copy; 2026 718 GT4 RS Tribute. Built by SHMaribojo</p>
+            <p class="disclaimer">Final-Project Web Design with Side Scripting (IT0043) </p>
+        </div>
+    </div>
+    </footer>
+
+        </div>
+    </main>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const modelParam = urlParams.get('model');
+            if (modelParam) {
+                const selectElement = document.getElementById('model-select');
+                if (selectElement) {
+                    selectElement.value = modelParam;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

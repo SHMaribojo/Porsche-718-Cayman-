@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche 718 Cayman </title>
+    <link rel="stylesheet" href="homestyle.css">
+</head>
+<body>
+
+    <header class="global-header">
+        <div class="logo">PORSCHE</div>
+        <nav class="nav-links">
+            <a href="index.html" class="active"></a>
+            <a href="history.html">History</a>
+            <a href="models.html">Models</a>
+            <a href="contact.html">Contact</a>    
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section" id="hero">
+            <div class="hero-video-container">
+                <img src="homebackground.jpg" alt="Porsche 718 Cayman" class="hero-bg">
+                <div class="hero-overlay"></div>
+            </div>
+
+            <div class="hero-content">
+                <p class="hero-subtitle">Porsche 718 Cayman</p>
+                <h1 class="hero-title">Refinement.</h1>
+                <button class="ios-btn" id="discoverBtn">Discover More</button>
+            </div>
+            
+            <div class="scroll-indicator">↓</div>
+        </section>
+
+        <section class="details-section" id="details">
+            <video autoplay loop muted playsinline class="video-bg">
+              <source src="caymanvideo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+           </video>
+           <div class="video-overlay"></div>
+            <div class="details-container">
+                <div class="text-block">
+                    <span class="tag">Performance</span>
+                    <h2>Balance over Horsepower</h2>
+                    <p>The Porsche 718 or simply the Cayman, is a Mid-Engine sports coupe designed for purists who enjoys the feel, the precision of driving a sports car. This car isn't for commute, it's for people who uses it right.</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-num">300 PS+</span>
+                        <span class="stat-label">Horsepower varies between Models</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">275 km/h+</span>
+                        <span class="stat-label">Up to 4.0s</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cayman-gallery-section">
+    <div class="gallery-header">
+        <span class="gallery-subtitle">A glimpse of what could be yours </span>
+        <h2 class="gallery-title">Gallery</h2>
+    </div>
+
+    <div class="cayman-gallery-grid">
+        <div class="gallery-item wide">
+            <img src="rscup.avif" alt="Porsche Cayman Side Profile">
+            <div class="gallery-overlay">
+                <span>Track-only Race car called the "718 Cayman GT4 RS Clubsport"</span>
+            </div>
+        </div>
+
+        <div class="gallery-item tall">
+            <img src="interior.webp" alt="Porsche Steering Wheel">
+            <div class="gallery-overlay">
+                <span>Interior</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="weissach.jpg" alt="Porsche Headlight Detail">
+            <div class="gallery-overlay">
+                <span>Optional Weissach Package</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="specialboxster.jpg" alt="Porsche Wheel Rim">
+            <div class="gallery-overlay">
+                <span>Special Edition of the 718 Boxster</span>
+            </div>
+        </div>
+
+        <div class="gallery-item wide">
+            <img src="cinespyder.webp" alt="Porsche Rear View">
+            <div class="gallery-overlay">
+                <span>Open-top version of the Track-focused 718 GT4 RS</span>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="engine-sound-section">
+    <div class="sound-card-container">
+        <div class="sound-info">
+            <span class="sound-tag">Sound Experience</span>
+            <h3 class="sound-title">718 Cayman GT4 RS</h3>
+            <p class="sound-desc">Note: Audio will differ based on models since the GT4 RS uses a Flat-6, offering high-rev's and a dual stainless steel and titanium exhaust system </p>
+        </div>
+        
+        <div class="sound-controls-row">
+            <button class="play-engine-btn" onclick="toggleEngineSound('cockpit', this)">
+                <span class="btn-icon">🔊</span>
+                <span class="btn-text">Cockpit Audio</span>
+            </button>
+            
+            <button class="play-engine-btn" onclick="toggleEngineSound('exhaust', this)">
+                <span class="btn-icon">🔊</span>
+                <span class="btn-text">Exhaust Audio</span>
+            </button>
+            
+            <button class="play-engine-btn" onclick="toggleEngineSound('flyby', this)">
+                <span class="btn-icon">🔊</span>
+                <span class="btn-text">Flyby Audio</span>
+            </button>
+        </div>
+    </div>
+    <audio id="audio-cockpit" src="cockpit.MP3" preload="auto"></audio>
+    <audio id="audio-exhaust" src="exhaust.MP3" preload="auto"></audio>
+    <audio id="audio-flyby" src="flyby.MP3" preload="auto"></audio>
+</section>
+ <footer class="porsche-footer">
+    <div class="footer-container">
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="models.html">Models</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="footer-legal">
+            <p class="copyright">&copy; 2026 718 GT4 RS Tribute. Built by SHMaribojo</p>
+            <p class="disclaimer">Final-Project Web Design with Side Scripting (IT0043) </p>
+        </div>
+    </div>
+    </footer>
+</section>
+    </main>
+        <script src="homeinteract.js"></script>
+</body>
+</html>
